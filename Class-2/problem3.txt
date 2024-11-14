@@ -1,0 +1,4 @@
+Find The Longest Word:
+
+Write a function that finds the longest word in given sentence and returns it. 
+if there are multiple words then return the 1st one

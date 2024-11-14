@@ -1,0 +1,3 @@
+Count Words in a sentence:
+
+Write a function that takes a sentence input and count all the words

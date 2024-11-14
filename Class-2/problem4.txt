@@ -1,0 +1,4 @@
+Remove Duplicates:
+
+Write a function that takes a string and return a new string wher all the duplicate characters are removed. Keep 
+only he first occurrence of each character
