@@ -1,3 +1,5 @@
+from icecream import ic
+
 def find_max(numbers):
     res = 0
     for i in numbers:
@@ -6,4 +8,4 @@ def find_max(numbers):
     
     return res
 
-print(find_max([1, 7, 3, 4, 5]))
+ic(find_max([1, 7, 3, 4, 5]))
