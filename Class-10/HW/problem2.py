@@ -8,24 +8,24 @@ class Shape:
 
 class Triangle(Shape):
     def calculate_area(self):
-        print((self.width*self.height)*0.5)
+        print("Triangle Area: ", (self.width*self.height)*0.5)
 
     def calculate_perimiter(self):
-        print(self.width + self.height + self.base)
+        print("Triangle Perimiter: ",self.width + self.height + self.base)
 
 class Square(Shape):
     def calculate_area(self):
-        print(self.width ** 2)
+        print("Square Area: ", self.width ** 2)
 
     def calculate_perimiter(self):
-        print(4 * self.width)
+        print("Square Perimiter: ", 4 * self.width)
 
 class Circle(Shape):
     def calculate_area(self):
-        print(3.1416 * (self.radius ** 2))
+        print("Circle Area: ", 3.1416 * (self.radius ** 2))
 
     def calculate_perimiter(self):
-        print(2 * 3.1416 * self.radius)
+        print("Circle Perimiter: ", 2 * 3.1416 * self.radius)
 
 circle = Circle(0, 0, 5, 0, 0)
 circle.calculate_area()
