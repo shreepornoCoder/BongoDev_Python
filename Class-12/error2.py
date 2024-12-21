@@ -9,3 +9,6 @@ except Exception as e:
 
     else:
         print("Enter Correct Input!")
+
+finally:
+    print("Thanks for using our program!")
