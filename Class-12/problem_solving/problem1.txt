@@ -1,0 +1,5 @@
+Create a simple function that handles division by zero errors. The function
+should:
+1. Take two numbers as input
+2. Attempt to divide them
+3. Handle the potential ZeroDivisionError gracefully
