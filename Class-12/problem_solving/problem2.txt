@@ -1,0 +1,5 @@
+Create a simple banking system that uses custom exceptions. The system
+should:
+1. Track account balance
+2. Handle deposits and withdrawals
+3. Raise custom exceptions for invalid operations
