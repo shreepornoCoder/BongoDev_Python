@@ -33,3 +33,8 @@ class Student_Get_View(views.APIView):
         serializer = Student_Serializer(student)
 
         return Response(serializer.data) 
+
+class Student_Update(generics.UpdateAPIView):
+    queryset = Student.objects.all()
+    serializer_class = Student_Serializer
+
