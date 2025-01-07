@@ -1,3 +1,0 @@
-CREATE DATABASE amarshop_db
-
-GRANT ALL PRIVILEGES ON DATABASE amarshop_db TO postgres
