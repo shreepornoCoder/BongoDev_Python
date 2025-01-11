@@ -6,8 +6,9 @@ from datetime import datetime
 class User(AbstractUser):
     email = models.EmailField(unique=True)
     phone_number = models.CharField(max_length=11)
+    address = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     USERNAME_FIELD = 'email'
 
@@ -28,7 +29,7 @@ class User(AbstractUser):
         return self.username
 
 class Address(models.Model):
-    user = models.ForeignKey(to=User, on_delete=models.CASCADE)
+    user = models.ForeignKey(to=User, on_delete=models.CASCADE, related_name="user")
     street_address = models.TextField()
     city = models.CharField(max_length=120)
     division = models.CharField(max_length=120)
