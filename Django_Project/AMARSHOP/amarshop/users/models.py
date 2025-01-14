@@ -29,7 +29,7 @@ class User(AbstractUser):
         return self.username
 
 class Address(models.Model):
-    user = models.ForeignKey(to=User, on_delete=models.CASCADE, related_name="user")
+    user = models.ForeignKey(to=User, on_delete=models.CASCADE, related_name="user") #
     street_address = models.TextField()
     city = models.CharField(max_length=120)
     division = models.CharField(max_length=120)
