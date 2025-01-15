@@ -44,3 +44,10 @@ def login_user(request):
             'error':'Invalid Credintials!',
         }, status=status.HTTP_401_UNAUTHORIZED) 
     return Response(serializer.data, status=status.HTTP_404_NOT_FOUND)
+
+class UpdateProfileView(generics.RetrieveUpdateAPIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = UserSerializers
+
+    def get_object(self):
+        return self.request.user
