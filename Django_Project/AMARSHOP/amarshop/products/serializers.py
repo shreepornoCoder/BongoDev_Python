@@ -32,7 +32,8 @@ class ProductListSerializer(serializers.ModelSerializer):
 class ProductDetailSerializer(serializers.ModelSerializer):
     category = CategorySerializer()
     brand = BrandSerializer()
-    images = ProductImage(many=True)
+    #images = ProductImage()
+    images = ProductImageSerializer(many=True)
     class Meta:
         model = Product
         exclude = ["updated_at"]

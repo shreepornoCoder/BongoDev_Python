@@ -52,7 +52,7 @@ class UpdateProfileView(generics.RetrieveUpdateAPIView):
     def get_object(self):
         return self.request.user
     
-class UpdateProfileView(generics.ListCreateAPIView):
+class AddressViewset(generics.ListCreateAPIView):
     permission_classes = [IsAuthenticated]
     serializer_class = AddressSerializers
 
