@@ -10,11 +10,10 @@ class Cart(models.Model):
 
     # utility methods
     def get_total_price(self):
-        total_price = 0
-        for item in self.items.all():
-            total_price += item.get_price()
-
-        return total_price
+        return sum(item.get_price() for item in self.items.all())
+    
+    def get_total_item(self):
+        return sum(item.quantity for item in self.items.all())
 
 class CartItems(models.Model):
     cart = models.ForeignKey(to=Cart, on_delete=models.CASCADE, related_name="items")
@@ -27,3 +26,15 @@ class CartItems(models.Model):
     # utility methods
     def get_price(self):
         return self.product.price * self.quantity
+    
+    class Meta:
+        unique_together = ['cart', 'product']
+    
+class Saved_Items(models.Model):
+    user = models.OneToOneField(to=User, on_delete=models.CASCADE, related_name="saved_items")
+    product = models.ForeignKey(to=Product, on_delete=models.CASCADE, related_name="product")
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ['user', 'product']
