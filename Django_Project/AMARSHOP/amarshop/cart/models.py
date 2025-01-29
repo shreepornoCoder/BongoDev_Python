@@ -32,7 +32,7 @@ class CartItems(models.Model):
     
 class Saved_Items(models.Model):
     user = models.OneToOneField(to=User, on_delete=models.CASCADE, related_name="saved_items")
-    product = models.ForeignKey(to=Product, on_delete=models.CASCADE, related_name="product")
+    product = models.ForeignKey(to=Product, on_delete=models.CASCADE, related_name="saved_product")
 
     created_at = models.DateTimeField(auto_now_add=True)
 
