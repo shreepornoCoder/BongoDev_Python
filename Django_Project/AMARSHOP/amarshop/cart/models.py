@@ -12,7 +12,7 @@ class Cart(models.Model):
     def get_total_price(self):
         return sum(item.get_price() for item in self.items.all())
     
-    def get_total_item(self):
+    def get_total_quantity(self):
         return sum(item.quantity for item in self.items.all())
 
 class CartItems(models.Model):
